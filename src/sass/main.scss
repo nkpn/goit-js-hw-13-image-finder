@@ -1,4 +1,224 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: Rubik;
+  font-weight: 500;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li,
+a {
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0 0;
+  color: #000000;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 0;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-nav-item {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.main-nav-item a {
+  &:hover,
+  &:focus {
+    color: #6d6b64;
+    transition-property: color;
+    transition-duration: 300ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.cabinet {
+  margin-left: 600px;
+}
+
+.main-section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.input {
+  width: 300px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  margin-right: 10px;
+
+  &:hover,
+  &:focus {
+    border: 2px solid rgb(255, 253, 253);
+  }
+}
+
+.overlay {
+  max-width: 1920px;
+  height: 500px;
+  background-size: cover;
+  background-image: url(../images/architecture-cut.jpg);
+}
+
+.gallery-section {
+  padding-bottom: 25px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.photo-card {
+  position: relative;
+  overflow: hidden;
+
+  display: inline-block;
+  margin-top: 25px;
+  margin-left: 25px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 2px rgba(60, 20, 61, 0.12), 3px 4px 5px rgba(60, 20, 61, 0.16),
+      6px 7px 8px rgba(60, 20, 61, 0.16);
+    cursor: pointer;
+  }
+
+  &:hover .stats,
+  &:focus .stats {
+    transform: translateY(0);
+  }
+}
+
+.image-thumb {
+  img {
+    display: block;
+    margin: 0;
+    object-fit: cover;
+    height: 250px;
+  }
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  color: #000000;
+  flex-wrap: wrap;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+  color: #fff;
+  background-color: #6d6b64;
+  opacity: 75%;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stats-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+}
+
+.material-icons {
+  color: #fff;
+}
+
+.button {
+  background: white;
+  text-decoration: none;
+  width: 140px;
+  height: 45px;
+  border-radius: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background: #2ee59d;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, 0.4);
+    color: white;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.load-btn-container {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.load-button {
+  border: none;
+  box-shadow: none;
+  &:hover {
+    background: none;
+    box-shadow: 0 15px 20px rgba(118, 227, 247, 0.4);
+    color: #000000;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

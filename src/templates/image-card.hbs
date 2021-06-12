@@ -1,8 +1,9 @@
-{{#each this}}
-<li>{{this.name}}
+{{#each this.hits}}
+<li class="card">
     <div class="photo-card">
-        <img src="{{this.webformatURL}}" alt="{{this.name}}" />
-    
+        <div class="image-thumb">
+        <img src="{{this.webformatURL}}" alt="{{this.tags}}" data="{{this.largeImageURL}}" width ="350"/>
+        </div>
         <div class="stats">
             <p class="stats-item">
                 <i class="material-icons">thumb_up</i>

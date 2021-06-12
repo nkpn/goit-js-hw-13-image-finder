@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "basiclightbox": "^5.0.4",
+    "dist": "^0.1.2",
     "lodash.debounce": "^4.0.8",
     "pnotify": "^5.2.0"
   }

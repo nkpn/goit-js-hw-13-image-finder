@@ -12,20 +12,45 @@
     />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
     rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&display=swap" rel="stylesheet">
+    
   </head>
   <body>
-    <div class="picture-container">
-      <form class="search-form" id="search-form">
-        <input type="text" name="query" autocomplete="off" placeholder="Search images..." />
-      </form>
-
-    <h2>Результат:</h2>
-    <ul class="gallery">
-        <!-- Список <li> с карточками изображений -->
-    </ul>
-    </div>
+    <header class="page-header">
+        <div class="container">
+          
+        
+        <ul class="main-nav">
+          <img class="logo" src="./images/pixabay-logo.svg" alt="pixabay-logo" width="35" height="35">
+          <li class="main-nav-item"><a href="#">Главная страница</a></li>
+          <li class="main-nav-item"><a href="#">Фото</a></li>
+          <li class="main-nav-item"><a href="#">О нас</a></li>
+          <li class="main-nav-item cabinet"><a href="#">Личный кабинет</a></li>
+        </ul>
+        
+      </div>
+    </header>
     
+    <section class="main-section overlay">
+    <form class="search-form" id="search-form">
+      <input class="input "type="text" name="query" autocomplete="off" placeholder="Введите запрос..." >
+      <button type="submit" class="button submit-button">Поиск</button>
+    </form>
+    </section>
 
+    <section class="gallery-section"></section>
+    <div class="container ">
+      <ul class="gallery">
+          <!-- Список <li> с карточками изображений -->
+      </ul>
+    </div>
+    <div class="load-btn-container">
+      <button type="button" class="button load-button">Загрузить ещё</button>
+    </div>
+
+    <div class="test-container"></div>
+         
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
   </body>
