@@ -24,6 +24,7 @@ function onSearch(e) {
     apiService.fetchImages()
     .then(renderImage);
     clearGallery();
+    showLoadBtn()
 }
 
 function renderImage(data) {
@@ -33,8 +34,9 @@ function renderImage(data) {
 
 function onLoadMore() {
     apiService.fetchImages()
-    .then(renderImage)
-    .then(scrollIntoView)
+        .then(renderImage)
+        .then(scrollIntoView)
+    
 }
 
 function clearGallery() {
@@ -46,5 +48,9 @@ function scrollIntoView() {
         behavior: 'smooth',
         block: 'end',
     });
+}
+
+function showLoadBtn() {
+    refs.loadMoreButton.classList.add('is-open');
 }
 

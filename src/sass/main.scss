@@ -211,8 +211,10 @@ li {
 }
 
 .load-button {
+  opacity: 0;
   border: none;
   box-shadow: none;
+  pointer-events: none;
   &:hover {
     background: none;
     box-shadow: 0 15px 20px rgba(118, 227, 247, 0.4);
@@ -221,4 +223,9 @@ li {
     transition-duration: 500ms;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
+}
+
+.load-button.is-open {
+  opacity: 1;
+  pointer-events: initial;
 }
