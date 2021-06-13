@@ -26,9 +26,9 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
+    "@pnotify/core": "^5.2.0",
     "basiclightbox": "^5.0.4",
     "dist": "^0.1.2",
-    "lodash.debounce": "^4.0.8",
-    "pnotify": "^5.2.0"
+    "lodash.debounce": "^4.0.8"
   }
 }

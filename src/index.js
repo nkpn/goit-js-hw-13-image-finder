@@ -2,19 +2,22 @@ import './sass/main.scss';
 import ApiService from './js/apiService';
 import getRefs from './js/get-refs';
 import ImageCardTemplate from './templates/image-card.hbs';
-// import './js/open-img';
+const basicLightbox = require('basiclightbox');
+import "./../node_modules/basiclightbox/dist/basicLightbox.min.css"
 const debounce = require('lodash.debounce');
 
-import '@pnotify/core/dist/PNotify.css';
-import '@pnotify/core/dist/BrightTheme.css';
-import { alert, error, success, defaults, defaultStack } from '@pnotify/core';
-defaults.maxTextHeight = null; //* убрал колесо прокрутки у pnotify alert
+//* Pnotify
+// import '@pnotify/core/dist/PNotify.css';
+// import '@pnotify/core/dist/BrightTheme.css';
+// import { alert, error, success, defaults, defaultStack } from '@pnotify/core';
+// defaults.maxTextHeight = null; //* убрал колесо прокрутки у pnotify alert
 
 const refs = getRefs();
 const apiService = new ApiService();
 
 refs.searchForm.addEventListener('submit', onSearch);
 refs.loadMoreButton.addEventListener('click', onLoadMore);
+refs.gallery.addEventListener('click', modal)
 
 
 function onSearch(e) {
@@ -52,5 +55,20 @@ function scrollIntoView() {
 
 function showLoadBtn() {
     refs.loadMoreButton.classList.add('is-open');
+}
+
+function modal() {
+    refs.gallery.onclick = (e) => {
+        const linkImg = e.target.getAttribute('data');
+        const instance = basicLightbox.create(`
+            <div class="modal" >
+                <img class='img' src=${linkImg} alt="image" allowfullscreen>
+            </div>
+        `);
+        instance.show();
+        document.querySelector('.modal').onclick = (e) => {
+            instance.close();
+        }
+    }
 }
 
