@@ -171,7 +171,7 @@ li {
   height: 25%;
   color: #fff;
   background-color: #6d6b64;
-  opacity: 75%;
+  // opacity: 75%;
   transform: translateY(100%);
   transition-property: transform;
   transition-duration: 500ms;
@@ -233,7 +233,6 @@ li {
 }
 
 .load-button.is-open {
-  opacity: 1;
   pointer-events: initial;
 }
 
