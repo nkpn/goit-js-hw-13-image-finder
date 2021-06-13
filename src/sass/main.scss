@@ -121,6 +121,13 @@ li {
   padding: 0;
 }
 
+.card {
+  &:hover .stats,
+  &:focus .stats {
+    transform: translateY(0);
+  }
+}
+
 .photo-card {
   position: relative;
   overflow: hidden;
@@ -134,11 +141,6 @@ li {
     box-shadow: 0px 1px 2px rgba(60, 20, 61, 0.12), 3px 4px 5px rgba(60, 20, 61, 0.16),
       6px 7px 8px rgba(60, 20, 61, 0.16);
     cursor: pointer;
-  }
-
-  &:hover .stats,
-  &:focus .stats {
-    transform: translateY(0);
   }
 }
 
@@ -176,7 +178,7 @@ li {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .material-icons {
