@@ -140,9 +140,7 @@ li {
   &:focus .stats {
     transform: translateY(0);
   }
-}
 
-.image-thumb {
   img {
     display: block;
     margin: 0;
@@ -150,6 +148,15 @@ li {
     height: 250px;
   }
 }
+
+// .image-thumb {
+//   img {
+//     display: block;
+//     margin: 0;
+//     object-fit: cover;
+//     height: 250px;
+//   }
+// }
 
 .stats {
   display: flex;
